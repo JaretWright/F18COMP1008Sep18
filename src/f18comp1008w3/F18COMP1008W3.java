@@ -24,12 +24,20 @@ public class F18COMP1008W3 {
     
     public static double getAVG(ArrayList<Integer> grades)
     {
-        double sum =0;
-        for (Integer grade:grades)
+        if (grades.size()==0)
         {
-            sum += grade;
+            return 0;
         }
-        return sum / grades.size();
+        else
+        {
+            double sum =0;
+            for (Integer grade:grades)
+            {
+                sum += grade;
+            }
+
+            return sum / grades.size();
+        }
     }
     
 }
