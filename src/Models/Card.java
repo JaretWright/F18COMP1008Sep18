@@ -23,9 +23,9 @@ public class Card {
     /**
      * This is a constructor.  It MUST have the exact same name as your class
      */
-    public Card(String face, String suit)
+    public Card(String faceName, String suit)
     {
-        setFaceName(face);
+        setFaceName(faceName);
         setSuit(suit);
         setFaceValue();
     }
@@ -62,4 +62,30 @@ public class Card {
         return String.format("%s of %s with value %d", faceName, suit, faceValue);
     }
 
+    /**
+     * Return the value of the card
+     */
+    public int getFaceValue()
+    {
+        return faceValue;
+    }
+
+    public String getFaceName() {
+        return faceName;
+    }
+
+    public String getSuit() {
+        return suit;
+    }
+
+    public static List<String> getValidFaces() {
+        return validFaces;
+    }
+
+    public static List<String> getValidSuits() {
+        return validSuits;
+    }
+    
+    
+    
 }
