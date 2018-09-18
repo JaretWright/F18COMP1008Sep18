@@ -3,6 +3,9 @@ package Models;
 import java.util.Arrays;
 import java.util.List;
 
+
+
+
 /**
  *
  * @author jwright
@@ -14,8 +17,8 @@ public class Card {
     private static List<String> validFaces = Arrays.asList("2","3","4","5","6","7",
                                         "8","9","10","Jack","Queen","King","Ace");
     
-    private static List<String> validSuits = Arrays.asList("spades","clubs","hearts",
-                                                            "diamonds");
+    private static List<String> validSuits = Arrays.asList("Spades","Clubs","Hearts",
+                                                            "Diamonds");
     
     /**
      * This is a constructor.  It MUST have the exact same name as your class
@@ -52,4 +55,11 @@ public class Card {
     {
         faceValue=validFaces.indexOf(this.faceName)+2;
     }
+    
+    @Override
+    public String toString()
+    {
+        return String.format("%s of %s with value %d", faceName, suit, faceValue);
+    }
+
 }
